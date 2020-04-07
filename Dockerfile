@@ -6,6 +6,8 @@ USER nobody
 #WORKDIR /go/src/github.com/XWinterVarit/golang-ex
 
 #COPY . /go/src/github.com/XWinterVarit/golang-ex
+RUN mkdir -p /go/src/golang-ex
+WORKDIR /go/src/golang-ex
 COPY . /go/src/golang-ex
 RUN go build
 
